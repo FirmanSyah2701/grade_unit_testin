@@ -11,26 +11,28 @@
 
         function insert(){
             $num = $_POST['number'];
-            if ($num > 80 && $num <= 100) {
+            if ($num >= 80.1 && $num <= 100) {
                 return self::$grd->convert($num, 'A');
-            } elseif ($num > 75 && $num <= 80) {
+            } elseif ($num >= 75.1 && $num <= 80) {
                 return self::$grd->convert($num, 'AB');
-            } elseif ($num > 70 && $num <= 75) {
+            } elseif ($num >= 70.1 && $num <= 75) {
                 return self::$grd->convert($num, 'B');
-            } elseif ($num > 65 && $num <= 70) {
+            } elseif ($num >= 65.1 && $num <= 70.1) {
                 return self::$grd->convert($num, 'BC');
-            } elseif ($num > 60 && $num <= 65) {
+            } elseif ($num >= 60.1 && $num <= 65.1) {
                 return self::$grd->convert($num, 'C');
-            } elseif ($num > 55 && $num <= 60) {
+            } elseif ($num >= 55.1 && $num <= 60.1) {
                 return self::$grd->convert($num, 'CD');
-            } elseif ($num > 40 && $num <= 55) {
+            } elseif ($num >= 40.1 && $num <= 55.1) {
                 return self::$grd->convert($num, 'D');
-            } elseif ($num >= 0 && $num <= 40) {
+            } elseif ($num >= 0 && $num < 40.1) {
                 return self::$grd->convert($num, 'E');
             } else if($num > 100) {
-                return "Batas maksimal nilai yang dikonversi adalah 100, harap periksa kembali input Anda";
+                return "<strong class='error'>Batas maksimal nilai 
+                    yang dikonversi adalah 100, harap periksa kembali input Anda </strong>";
             } else if($num < 0){
-                return "Program tidak dapat menerima nilai minus, harap periksa kembali input Anda";
+                return "<strong class='error'> Program tidak dapat menerima nilai minus, 
+                    harap periksa kembali input Anda</strong>";
             }           
 
         }

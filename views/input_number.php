@@ -22,7 +22,7 @@
         <form action="" method="post">
             <div class="form-group">
             <label for="">Input Number: </label>
-            <input style="margin-left:20px; padding:6px; margin-right:20px;" type="number" name="number">
+            <input style="margin-left:20px; padding:6px; margin-right:20px;" type="number" name="number" required>
 
             <button class="btn btn-purple-moon btn-rounded" type="submit" name="save">Convert</button>
             </div>

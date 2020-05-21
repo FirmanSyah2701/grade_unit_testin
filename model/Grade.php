@@ -9,7 +9,7 @@
                 $sql = "INSERT INTO grade_table VALUES (NULL, $num, '$char')";
                 $query = Database::getConnection()->prepare($sql);
                 $query->execute();
-                return "<strong class='success'>Conversi Berhasil!</strong>";
+                return "<strong class='success'> $char  </strong>";
             } catch (\Throwable $th) {
                 return "<p class='error'>Conversi Gagal: " . $th->getMessage() . "</p>";
             }

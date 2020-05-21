@@ -28,13 +28,10 @@
             } elseif ($num >= 0 && $num < 40.1) {
                 return self::$grd->convert($num, 'E');
             } else if($num > 100) {
-                return "<strong class='error'>Batas maksimal nilai 
-                    yang dikonversi adalah 100, harap periksa kembali input Anda </strong>";
+                return "<strong class='error'>Batas maksimal nilai yang dikonversi adalah 100, harap periksa kembali input Anda </strong>";
             } else if($num < 0){
-                return "<strong class='error'> Program tidak dapat menerima nilai minus, 
-                    harap periksa kembali input Anda</strong>";
-            }           
-
+                return "<strong class='error'> Program tidak dapat menerima nilai minus, harap periksa kembali input Anda</strong>";
+            }
         }
 
         function showAll(){
